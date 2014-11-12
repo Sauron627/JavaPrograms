@@ -1,0 +1,11 @@
+package metro;
+ 
+
+public class text {
+
+	public static void text(){
+		String[] szoveg = null;
+		
+		
+	}
+}

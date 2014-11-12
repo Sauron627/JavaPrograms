@@ -1,0 +1,12 @@
+package metro;
+ 
+
+public class text {
+
+	public static void  text(){
+		String[] szoveg = null;
+		szoveg[0]= "Helló";
+		szoveg[1]= "Világ!";
+		System.out.printf("%s %s",szoveg[0],szoveg[1]);
+	}
+}

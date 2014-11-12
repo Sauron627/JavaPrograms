@@ -1,0 +1,55 @@
+package metro;
+
+public class Megoldo {
+	
+		public void megalloszam(){
+			
+			int x = MetroReader.allomasok.length;
+			int y = MetroReader.allomasok[0].length;
+			
+			int osszeg = 0;			
+			
+			for(String[] megallok : MetroReader.allomasok){
+				for(String megallo: megallok){
+					if(megallo ==MetroReader.allomasok[0][0]) System.out.println(MetroReader.allomasok[0][0]);
+				}
+			}
+			
+			
+			
+			System.out.printf("%d\n",osszeg);
+		}
+		
+		public void leghosszabbVonalak(){
+			int metroLeghosszabb = 0;
+			int villamosLeghosszabb = 0;
+			int k = 0;
+			for(int i=0;i<MetroReader.metro;i++)
+			{
+				for(String s: MetroReader.allomasok[i])
+				{
+					 k+=1;
+				}
+				if(metroLeghosszabb <= k) metroLeghosszabb= k;
+				k=0;
+			}
+			k=0;
+			for(int j = MetroReader.metro; j<(MetroReader.metro+MetroReader.villamos);j++)
+			{
+				for(String s: MetroReader.allomasok[j])
+				{
+					k+=1;	
+				}
+				if(villamosLeghosszabb <= k) metroLeghosszabb= k;
+				k=0;
+			}
+			System.out.printf("%d %d\n", metroLeghosszabb,villamosLeghosszabb);
+		}
+		public void csakMetroval(){
+			
+		}
+		public Megoldo(){
+			;
+			
+		}
+}

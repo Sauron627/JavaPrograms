@@ -1,0 +1,49 @@
+package metro;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class MetroReader {
+
+	public static void read(String FilePath) throws IOException {
+    	
+    	
+        BufferedReader inputStream = null;
+
+        try {
+            inputStream = new BufferedReader(new FileReader(FilePath));
+           
+
+            String beSzoveg;
+            String[] Szoveg = null;
+            String[] allomasok = null;
+            beSzoveg = inputStream.readLine();
+            Szoveg = beSzoveg.split(" ");
+            int metro = Integer.parseInt(Szoveg[0]);
+            int villamos = Integer.parseInt(Szoveg[1]);
+            int vonalak = metro+villamos;
+            int megallo;
+            int hely=0;
+            
+            for(int i=0; i<vonalak;i++){
+            	megallo = (inputStream.read()-48);
+            	hely = inputStream.read();
+            	beSzoveg = inputStream.readLine();
+            	Szoveg = beSzoveg.split(", ");
+            	for(int j =0;j<megallo;j++){
+            	System.out.printf("%s ",Szoveg[j]);
+            	}
+            	System.out.println();
+            }
+            
+            
+               
+        } finally {
+            if (inputStream != null) {
+                inputStream.close();
+            }
+        }
+        
+}
+}

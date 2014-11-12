@@ -1,0 +1,11 @@
+package metro;
+import java.io.IOException;
+import 
+
+public class text {
+
+	public static void text(){
+		String[] szoveg = null;
+		
+	}
+}
